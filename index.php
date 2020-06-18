@@ -1,3 +1,12 @@
+<?php
+require_once("conexao.php");
+
+$query = "select * from pessoa";
+
+$resultado = mysqli_query($conexao, $query);
+//echo var_dump($resultado);
+//echo "LOL";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +22,18 @@
         <td>Idade</td>
         </th>
         </thead>
+        <tbody>
+            <?php
+                while($pessoa = mysqli_fetch_assoc($resultado)){
+                    //var_dump($pessoa);
+                    echo "<tr>
+                          <td> $pessoa[nome] </td>
+                          <td> $pessoa[idade]</td>
+                          </tr>
+                            ";
+                }
+            ?>
+        </tbody>
     </table>
 </body>
 </html>
