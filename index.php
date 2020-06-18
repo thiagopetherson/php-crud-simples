@@ -30,6 +30,7 @@ $resultado = mysqli_query($conexao, $query);
                           <td> $pessoa[nome] </td>
                           <td> $pessoa[idade]</td>
                           <td><a href='delete.php?id=$pessoa[id]'>excluir</a></td>
+                          <td><a href='edit.php?id=$pessoa[id]'>editar</a></td>
                           </tr>
                             ";
                 }
