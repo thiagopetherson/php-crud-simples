@@ -29,6 +29,7 @@ $resultado = mysqli_query($conexao, $query);
                     echo "<tr>
                           <td> $pessoa[nome] </td>
                           <td> $pessoa[idade]</td>
+                          <td><a href='delete.php?id=$pessoa[id]'>excluir</a></td>
                           </tr>
                             ";
                 }
