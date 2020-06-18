@@ -36,5 +36,14 @@ $resultado = mysqli_query($conexao, $query);
             ?>
         </tbody>
     </table>
+
+    <form action="create.php" method="POST">
+        <label for="nome">Nome</label><br>
+        <input type="text" name="nome"><br>
+        <label for="idade">Idade</label><br>
+        <input type="text" name="idade"><br>
+        <input type="reset" value="Limpar">
+        <input type="submit" value="enviar">
+    </form>
 </body>
 </html>
